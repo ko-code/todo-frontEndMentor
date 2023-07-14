@@ -2,8 +2,8 @@ import React from "react";
 
 const TodoFilter = ({ changeFilter, filter }) => {
   return (
-    <section className="container mx-auto  mt-8">
-      <div className="bg-white rounded p-4 flex justify-center gap-4">
+    <section className="container mx-auto  mt-8 ">
+      <div className="bg-white rounded p-4 flex justify-center gap-4 dark:bg-gray-800 transition-all duration-1000">
         <button
           onClick={() => changeFilter("all")}
           className={`${

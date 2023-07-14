@@ -68,12 +68,12 @@ const App = () => {
     }
   };
 
-  const changeFilter = (filter) =>{
-    setFilter(filter)
-  }
+  const changeFilter = (filter) => {
+    setFilter(filter);
+  };
 
   return (
-    <div className="min-h-screen bg-slate-100 bg-[url('./assets/images/bg-mobile-light.jpg')] bg-contain bg-no-repeat">
+    <div className="min-h-screen bg-no-repeat bg-contain  bg-slate-100 dark:bg-gray-900 transition-all duration-1000 bg-[url('./assets/images/bg-mobile-light.jpg')] dark:bg-[url('./assets/images/bg-mobile-dark.jpg')]">
       <Header />
       <main className="container mx-auto px-4">
         <TodoCreate createTodo={createTodo} />
@@ -86,9 +86,11 @@ const App = () => {
           computedLeft={computedLeft()}
           clearCompleted={clearCompleted}
         />
-        <TodoFilter changeFilter={changeFilter} filter={filter}/>
+        <TodoFilter changeFilter={changeFilter} filter={filter} />
       </main>
-      <footer className="text-center mt-8">Drag and Drop</footer>
+      <footer className="text-center mt-8 dark:text-gray-400 transition-all duration-1000">
+        Drag and Drop
+      </footer>
     </div>
   );
 };
